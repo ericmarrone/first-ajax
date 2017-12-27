@@ -13,13 +13,18 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   button2.addEventListener('click', function() {
     $.ajax({
-      url: 'http://first-ajax-api.herokuapp.com/ping',
+      url: 'http://first-ajax-api.herokuapp.com/pong',
       method: 'GET',
       dataType: 'text',
     }).done(function (responseData) {
       console.log(responseData);
       var responseText = document.createTextNode(responseData);
       section2.appendChild(responseText);
+    }).fail(function () {
+      var paragraph = document.createElement("p");
+      var failText = document.createTextNode("I will try harder next time.")
+      paragraph.appendChild(failText);
+      section2.appendChild(paragraph);
     });
   });
 });

@@ -19,3 +19,6 @@
 ## Step 3
 
 4. Response Content - Wow what a ride! I came all the way from the server!
+
+## Step 4
+3. 500 - Internal Server Error 
