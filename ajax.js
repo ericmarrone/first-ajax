@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var button2 = document.querySelector('#button2');
   var section2 = document.querySelector('#step3456');
   var section7 = document.querySelector('#step7');
+  var section8 = document.querySelector('#step8');
 
 
   button1.addEventListener('click', function() {
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
       dataType: 'text',
     });
   });
+
   button2.addEventListener('click', function() {
     $.ajax({
       url: 'http://first-ajax-api.herokuapp.com/ping',
@@ -31,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log('The request is finished!');
     });
   });
+
   button3.addEventListener('click', function() {
     $.ajax({
       url: 'http://first-ajax-api.herokuapp.com/count',
@@ -39,6 +42,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }).done(function (responseData) {
       var responseText = document.createTextNode(responseData);
       section7.appendChild(responseText);
+    });
+  });
+
+  button4.addEventListener('click', function() {
+    $.ajax({
+      url: 'http://first-ajax-api.herokuapp.com/time',
+      method: 'GET',
+      data:  {timezone: 'Pacific/Honolulu'},
+      dataType: 'text',
+    }).done(function (responseData) {
+      var responseText = document.createTextNode(responseData);
+      section8.appendChild(responseText);
     });
   });
 });
