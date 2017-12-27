@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function() {
       var failText = document.createTextNode("I will try harder next time.")
       paragraph.appendChild(failText);
       section2.appendChild(paragraph);
+    }).always(function () {
+      console.log('The request is finished!');
     });
   });
 });
