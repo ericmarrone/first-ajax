@@ -15,4 +15,7 @@
 
 5. Status 200 - OK. Method is still "GET".
 6. Type is 'xhr'. Initiator was jquery
- 
+
+## Step 3
+
+4. Response Content - Wow what a ride! I came all the way from the server!
