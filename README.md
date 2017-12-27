@@ -21,4 +21,7 @@
 4. Response Content - Wow what a ride! I came all the way from the server!
 
 ## Step 4
-3. 500 - Internal Server Error 
+3. 500 - Internal Server Error
+
+## Step 6
+2. Ping results in "Wow what a ride! I came all the way from the server! ". Pong results in server error.
