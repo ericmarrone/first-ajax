@@ -25,3 +25,7 @@
 
 ## Step 6
 2. Ping results in "Wow what a ride! I came all the way from the server! ". Pong results in server error.
+
+## Step 9
+
+3. Accepts - text/html. Content-type - text/html 
