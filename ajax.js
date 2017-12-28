@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
   button2.addEventListener('click', function() {
     $.ajax({
-      url: 'http://first-ajax-api.herokuapp.com/ping',
+      url: 'http://first-ajax-api.herokuapp.com/pong',
       method: 'GET',
       dataType: 'text',
     }).done(function (responseData) {
       console.log(responseData);
       var responseText = document.createTextNode(responseData);
       section2.appendChild(responseText);
-    }).fail(function () {
-      console.log('Some sort of failure...');
+    }).fail(function (jqXHR, textStatus, errorThrown ) {
+      console.log(jqXHR.responseText);
       var paragraph = document.createElement("p");
       var failText = document.createTextNode("I will try harder next time.")
       paragraph.appendChild(failText);
@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $.ajax({
       url: 'http://first-ajax-api.herokuapp.com/count',
       method: 'GET',
+      data: {'amount':5},
       dataType: 'text',
     }).done(function (responseData) {
       var responseText = document.createTextNode(responseData);
